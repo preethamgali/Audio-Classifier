@@ -91,4 +91,4 @@ with tf.device('/GPU:0'):
       print('e:',e,'total_error:',np.mean(t_error))
 
 i = 100 #ith dataset
-print(np.argmax(sess.run(prob , feed_dict= {input_img:[spec_data_set[i]]}) == labels[i])
+print(np.argmax(sess.run(prob , feed_dict= {input_img:[spec_data_set[i]]}) == np.argmax(labels[i]))
